@@ -26,6 +26,14 @@ public class NewsChannelSuperKeyword extends Reporter {
 
 	public static void main(String[] args) {
 		NewsChannelSuperKeyword nl=new NewsChannelSuperKeyword();
+		NewsChannelSuperKeyword n2=new NewsChannelSuperKeyword(10000000);
+		NewsChannelSuperKeyword n3=new NewsChannelSuperKeyword("RAVISH KUMAR");
+		NewsChannelSuperKeyword n4=new NewsChannelSuperKeyword("SUDHIR","CHAUDHARY",10000000);
+
+
+		
+		
+
 
 }
 	}

@@ -16,8 +16,8 @@ public class NewsChannelThisKeyword extends Reporter{
 		
 	}
 	public NewsChannelThisKeyword(String fname ,String lname,int Salary) {
-		System.out.println("The First Name for the best news anhor for Zee News : "+fname);
-		System.out.println("The Last Name for the best news anhor for Zee News : "+lname);
+		System.out.println("The First Name for the best news anchor for Zee News : "+fname);
+		System.out.println("The Last Name for the best news anchor for Zee News : "+lname);
 		System.out.println("The Salary for the best news Anchor for Zee News  : " +Salary);
 
 		
