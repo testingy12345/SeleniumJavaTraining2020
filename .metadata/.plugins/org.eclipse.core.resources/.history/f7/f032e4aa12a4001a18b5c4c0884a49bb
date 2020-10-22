@@ -1,0 +1,13 @@
+package com.string.part2.may282020;
+
+public class LiteralAndNonLiteralString {
+	
+
+	public static void main(String[] args) {
+		String s1="Vipin";
+		System.out.println(s1);
+		
+
+	}
+
+}

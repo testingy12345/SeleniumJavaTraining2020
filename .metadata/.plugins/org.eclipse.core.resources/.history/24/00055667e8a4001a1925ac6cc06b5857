@@ -1,0 +1,15 @@
+package com.array.collection;
+
+public class TwoDiamentionalArray {
+
+	public static void main(String[] args) {
+		int xx[][]=new int[3][3];
+		xx[0][0]=10;
+		xx[0][1]=15;
+		xx[1][0]=20;
+		xx[1][1]=35;
+		
+
+	}
+
+}

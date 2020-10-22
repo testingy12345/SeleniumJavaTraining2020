@@ -1,0 +1,38 @@
+package com.task.class6.screenshot.june152020;
+
+import java.io.File;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TaskScreenshotScroll {
+	int a=0;
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.edureka.co/");
+		System.out.println("Launch the Edureka Website");
+		driver.manage().window().maximize();
+		System.out.println("Maximize the window");
+		Thread.sleep(5000);
+		WebElement to=driver.findElement(By.xpath("//h2[contains(text(),'Trending Courses')]"));
+		Point location=to.getLocation();
+		int y=location.getY();
+		System.out.println("Location of Y co-ordinate is : "+y);
+		Thread.sleep(5000);
+		TakesScreenshot t=(TakesScreenshot)driver;
+		File sourse=t.getScreenshotAs(OutputType.FILE);
+		
+		
+		driver.quit();
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.class7.task.iframe.june162020;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TaskIframe {
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://demo.guru99.com/test/guru99home/");
+		Thread.sleep(3000);
+		System.out.println("Launch the guru99.com url");
+		driver.manage().window().maximize();
+		System.out.println("Maximize the browser");
+		WebElement w=(WebElement) driver.switchTo().frame("flow_close_btn_iframe");
+		System.out.println("We found Iframe :" +w);
+		driver.findElement(By.xpath("/html/body/center/div/div/div/div/img")).click();
+		System.out.println("We have clicked on the iframe image");
+		Thread.sleep(3000);
+		driver.quit();
+		System.out.println("Quit the browser");
+
+	}
+
+}

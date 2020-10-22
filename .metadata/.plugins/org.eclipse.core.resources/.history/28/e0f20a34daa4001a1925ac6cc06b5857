@@ -1,0 +1,9 @@
+package com.array.collection;
+
+public class OneDiamentional {
+
+	public static void main(String[] args) {
+
+	}
+
+}

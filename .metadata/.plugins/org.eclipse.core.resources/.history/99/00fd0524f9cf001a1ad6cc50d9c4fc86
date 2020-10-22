@@ -1,0 +1,3 @@
+Scenario: Launch FaceBook
+Given User Launches Chrome Browser
+Then User Enter username and password

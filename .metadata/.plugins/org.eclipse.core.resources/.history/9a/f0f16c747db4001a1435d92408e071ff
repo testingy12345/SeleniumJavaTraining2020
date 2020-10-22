@@ -1,0 +1,10 @@
+package com.class7.alertinterface.june162020;
+
+public class AlertDismiss {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

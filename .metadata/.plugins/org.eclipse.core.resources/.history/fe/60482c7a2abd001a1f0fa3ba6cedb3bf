@@ -1,0 +1,39 @@
+package com.class13.additionallocator.task.july12020;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FollowingAndPrecedingLocator {
+    public static WebDriver driver;
+	
+	
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		System.out.println("Facebook is Launched");
+		String title=driver.getTitle();
+		System.out.println(title);
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
+		System.out.println("Browser Maximized");
+		//By using following xpath
+		WebElement pass=driver.findElement(By.xpath("//input[@type='email']//following::input[1]"));
+		System.out.println("The Xpath of the given password :=>"+pass);
+		Thread.sleep(5000);
+
+		//By using preceding xpath
+		WebElement logIn=driver.findElement(By.xpath("//input[@value='Log In']//preceding::input[1]"));
+		System.out.println("The Xpath for the given Login using preceding concept :=>"+logIn);
+		Thread.sleep(5000);
+
+		
+		driver.quit();
+		System.out.println("Quit The Browser");
+		System.out.println("===============The End=================================");
+
+	}
+
+}

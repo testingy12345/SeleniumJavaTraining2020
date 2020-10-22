@@ -1,0 +1,12 @@
+Scenario: Launch FaceBook
+Given User Launches Chrome Browser
+Then User Enter username and password
+#=======================================================
+Scenario: Launch FbClick
+          Then User Click Submit Button
+          And Verify the Title
+          When User enter Username
+          And User enter Password
+          Then User Click Submit Button
+          
+#===================================================================

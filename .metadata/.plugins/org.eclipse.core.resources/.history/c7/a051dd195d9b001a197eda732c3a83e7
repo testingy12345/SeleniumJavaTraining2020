@@ -1,0 +1,10 @@
+package com.task.scanner1.compile20may;
+
+public class ComplieScanner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.string.part2.may282020;
+
+public class LiteralAndNonLiteralString {
+
+	public static void main(String[] args) {
+
+	}
+
+}

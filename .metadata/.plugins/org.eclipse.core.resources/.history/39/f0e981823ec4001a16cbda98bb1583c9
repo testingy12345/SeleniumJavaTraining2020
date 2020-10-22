@@ -1,0 +1,55 @@
+package com.class15.WriteExcel.june252020;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class WriteExcel {
+
+	public static void main(String[] args) throws IOException {
+		//FileInputStream ff=new FileInputStream("./data/WriteData.xlsx");
+
+		//FileInputStream ff=new FileInputStream("./data/WriteExcel.xlsx");
+		XSSFWorkbook wb=new XSSFWorkbook();
+		XSSFSheet sheet=wb.createSheet("CreateSheet2");
+		int rowcount=0;
+		Object [][] completedata= {{"Vipin","80"},{"Yuvraj","100"},{"Kapil","60"}};
+		for (Object[] onebyonedata : completedata) {
+			XSSFRow createRow=sheet.createRow(rowcount++);
+			int colcount=0;
+			for (Object cellvalue : onebyonedata) {
+				XSSFCell createCell=row.createCell(colcount++);
+				createCell.setCellValue(  (String) cellvalue);
+				
+			}
+			
+		}
+		//XSSFSheet sheet=wb.createSheet("CreateSheet0");
+	/*	XSSFRow createRow=sheet.createRow(0);
+		XSSFCell createCell=createRow.createCell(0);
+		createCell.setCellValue("Vipin");
+		XSSFCell createCell1=createRow.createCell(1);
+		createCell1.setCellValue("Virtusa");
+		XSSFCell createCell2=createRow.createCell(2);
+		createCell2.setCellValue("RMZ");
+		XSSFCell createCell3=createRow.createCell(3);
+		createCell3.setCellValue("Bengaluru");
+		FileOutputStream f=new FileOutputStream("./data/WriteExcel.xlsx");*/
+		FileOutputStream f=new FileOutputStream("./data/NewExcelSheet.xlsx");
+
+		wb.write(f);
+		f.close();
+		System.out.println("Close the sheet");
+		
+
+	}
+
+}

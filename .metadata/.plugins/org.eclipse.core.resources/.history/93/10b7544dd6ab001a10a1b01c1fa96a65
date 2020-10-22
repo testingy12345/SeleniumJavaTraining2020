@@ -1,0 +1,31 @@
+package com.java.interview.task.programme.june102020;
+
+public class TaskPyramid {
+	
+	public void star(int n) {
+		for (int i = 1; i <=n; i++) {
+			for (int j = (n-1); j>1;j--) {
+
+				System.out.print(" ");
+				
+
+			}
+			for(int j=0 ;j<=i;j++) {
+				System.out.println("* ");
+			
+			
+			}
+			System.out.println();
+
+
+		}
+
+	}
+
+	public static void main(String[] args) {
+		TaskPyramid tp=new TaskPyramid();
+		tp.star(7);
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.test.june302020;
+
+public class ConstructorOveloading {
+	
+	public  ConstructorOveloading() {
+		System.out.println("Default Constructor Overloading");
+	}
+	public void ConstructorOveloading(int a) {
+		System.out.println("The Given integer value for the ConstructorOveloading is  " +a);
+	}
+	public void ConstructorOveloading(String str) {
+		System.out.println("The given String for ConstructorOveloading is : "+str);
+	}
+
+	public static void main(String[] args) {
+		ConstructorOveloading cov=new ConstructorOveloading();
+		
+
+	}
+
+}

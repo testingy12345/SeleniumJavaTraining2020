@@ -1,0 +1,12 @@
+#Author: yuvaraj
+Feature: My first feature file
+
+
+Scenario Outline: Launch Fb
+Given User launch fb "<url>"
+And user enters "<username>" and "<password>"
+Then user click submit button
+
+
+Examples:
+| username | password | url|

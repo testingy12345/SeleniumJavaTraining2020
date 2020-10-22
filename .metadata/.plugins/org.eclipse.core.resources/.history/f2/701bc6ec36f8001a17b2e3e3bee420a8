@@ -1,0 +1,18 @@
+package com.additionaltask.array.septmber162020;
+
+import java.util.Scanner;
+
+public class ScannerClassArray {
+
+	public static void main(String[] args) {
+		int[] i=new int[5];
+		Scanner s=new Scanner(System.in);
+		System.out.println("The Given 5 integer of an element are as follows ");
+		
+		
+		
+		
+
+	}
+
+}

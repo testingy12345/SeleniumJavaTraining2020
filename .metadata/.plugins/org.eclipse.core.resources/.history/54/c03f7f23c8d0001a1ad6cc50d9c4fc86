@@ -1,0 +1,13 @@
+#Author: yuvaraj
+Feature: My first feature file
+
+
+Scenario Outline: Launch Fb
+Given Vipin launch fb "<url>"
+And ajay enters "<username>" and "<password>"
+Then ashok click submit button
+
+
+Examples:
+| username | password | url|
+| yuvaraj@gmail.com | asdf@123 | https://fb.com |

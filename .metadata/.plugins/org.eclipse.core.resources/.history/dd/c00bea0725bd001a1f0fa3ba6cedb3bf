@@ -1,0 +1,14 @@
+package com.class13.additionallocator.task.july12020;
+
+import org.openqa.selenium.WebDriver;
+
+public class FollowingAndPrecedingLocator {
+    public static WebDriver driver;
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

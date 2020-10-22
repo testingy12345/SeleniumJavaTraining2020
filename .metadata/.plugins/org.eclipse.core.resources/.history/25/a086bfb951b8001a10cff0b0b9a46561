@@ -1,0 +1,32 @@
+package com.class8.task.checkradio.june172020;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TaskRadioButton {
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		Thread.sleep(5000);
+		System.out.println("Launch testautomationpractice.com url");
+		driver.manage().window().maximize();
+		System.out.println("Maximize the browser");
+		WebElement f=driver.findElement(By.xpath("//input[@id=\"RESULT_RadioButton-7_0\"]"));
+		f.click();
+		System.out.println("Radio button of female gets selected :"+f);
+		Point location=f.getLocation();
+		int y=location.getY();
+		System.out.println("The Location of y is : "+y);
+		Thread.sleep(5000);
+		driver.quit();
+		System.out.println("Quit the browser");
+
+	}
+
+}

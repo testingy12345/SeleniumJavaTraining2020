@@ -1,0 +1,26 @@
+package com.class8.task.checkradio.june172020;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TaskRadioButton {
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.facebook.com/");
+		Thread.sleep(5000);
+		System.out.println("Launch facebook.com url");
+		driver.manage().window().maximize();
+		System.out.println("Maximize the browser");
+		driver.findElement(By.cssSelector("#u_0_9")).click();
+		Thread.sleep(5000);
+		System.out.println("Radio button of female gets selected");
+		driver.quit();
+		System.out.println("Quit the browser");
+
+	}
+
+}

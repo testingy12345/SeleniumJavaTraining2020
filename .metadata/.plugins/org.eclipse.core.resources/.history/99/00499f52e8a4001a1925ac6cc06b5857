@@ -1,0 +1,9 @@
+package com.array.collection;
+
+public class TwoDiamentionalArray {
+
+	public static void main(String[] args) {
+
+	}
+
+}

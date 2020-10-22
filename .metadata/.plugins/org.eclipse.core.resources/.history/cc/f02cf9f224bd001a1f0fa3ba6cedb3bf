@@ -1,0 +1,10 @@
+package com.class13.additionallocator.task.july12020;
+
+public class FollowingAndPrecedingLocator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

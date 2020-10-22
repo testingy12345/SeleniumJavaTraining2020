@@ -1,0 +1,13 @@
+package com.array.collection;
+
+public class OneDiamentional {
+
+	public static void main(String[] args) {
+		int a[]= {1,2,5,8,9};
+		int b[] ;
+		b=new int[3];
+		
+
+	}
+
+}

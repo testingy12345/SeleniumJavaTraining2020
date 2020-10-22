@@ -1,0 +1,34 @@
+package com.task.string.may272020;
+
+public class TaskStringClass {
+
+	public static void main(String[] args) {
+		String a="My Office is Located in RMZ ECOWORLD Bangalore";
+		String a1="office";
+		String a2="Office";
+		
+		int l=a.length();
+		System.out.println("The String Length is"+l);
+		
+		if(a.equals(a1)) {
+			System.out.println("Strings are Equal");
+			
+		}else {
+			System.out.println("Strings are not Equal");
+			
+		}
+		
+		if(a1.equalsIgnoreCase(a2)) {
+			System.out.println("Strings are Equal");
+
+	    }else
+		{
+		   System.out.println("Strings are Equal");
+
+		}
+		
+		
+
+	}
+
+}

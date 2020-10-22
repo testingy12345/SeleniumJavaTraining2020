@@ -1,0 +1,12 @@
+package com.project.may20override;
+
+public final class BigBazzar {
+	final int i=10;
+	static int j=20;
+	
+	public void abc() {
+		System.out.println(i);
+	}
+	
+
+}

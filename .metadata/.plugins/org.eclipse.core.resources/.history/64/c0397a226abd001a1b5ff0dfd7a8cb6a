@@ -1,0 +1,32 @@
+package com.class11.launch.wait.june222020;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class FlipkartSite {
+	public static WebDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver",".\\driver\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("https://www.facebook.com/");//"https://www.facebook.com/"
+		System.out.println("Facebook is Launched");
+		Thread.sleep(5000);
+		String currentUrl=driver.getCurrentUrl();
+		System.out.println("The Current Url is :=>"+currentUrl);
+        System.out.println("=========================================");
+		String title=driver.getTitle();
+		System.out.println("The Given Title is :=>" +title);
+        System.out.println("=========================================");
+        driver.manage().window().maximize();
+        System.out.println("Maximize the Browser");
+        
+        WebDriverWait ww=new WebDriverWait(driver,20);
+        
+        driver.quit();
+        System.out.println("quit the browser");
+
+	}
+
+}

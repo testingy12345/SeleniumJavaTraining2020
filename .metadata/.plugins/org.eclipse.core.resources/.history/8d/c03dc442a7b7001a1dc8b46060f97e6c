@@ -1,0 +1,47 @@
+package com.class9.windowhandle.june182020;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowHandle {
+
+	public static WebDriver driver;
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://demo.guru99.com/popup.php");
+		Thread.sleep(3000);
+		System.out.println("Launch guru99.com pop up url");
+		driver.manage().window().maximize();
+		System.out.println("Maximize the browser");
+		driver.findElement(By.xpath("//a[contains(text(),'Click Here')]")).click();
+		System.out.println("Click Here Tab Got Clicked ");
+		Thread.sleep(5000);
+		String parentwindow=driver.getWindowHandle();
+		Set<String> windowhandles=driver.getWindowHandles();
+		for(String childwindow:windowhandles) {
+			if(!parentwindow.equals(childwindow)) {
+				
+				driver.switchTo().window(childwindow);
+				driver.findElement(By.name("emailid")).sendKeys("b@gmail.com");
+				System.out.println("Email id is entered");
+				driver.findElement(By.name("btnLogin")).click();
+				System.out.println("Login button is Clicked");
+				System.out.println("Submit button is clicked");
+			}
+			
+			
+			
+		}
+		
+		
+
+		driver.quit();
+		System.out.println("Quit the browser");
+
+	}
+
+}
